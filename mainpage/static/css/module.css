@@ -1,0 +1,133 @@
+/* =====================================
+              CSS RESET
+===================================== */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline;}
+body {line-height:1;}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {display:block;}
+ul li{list-style:none;}
+a {margin: 0; padding: 0; border: 0; vertical-align: baseline; background: transparent; text-decoration: none; color: inherit; display: inline-block;}
+img {vertical-align: bottom;}
+html,body {height: 100%;}
+button {border: 0px; outline: none;}
+body {background-color: #F5F5F5; font-family: 'Roboto', Noto Sans CJK KR, sans-serif;}
+
+/* =====================================
+            LINE SYSTEM
+===================================== */
+
+.sep-line-v {
+    display: block;
+    width: 1px;
+    height: 35px;
+    margin: 2rem auto;
+    border: none;
+    border-right: 1px solid rgba(0,0,0,1);
+}
+
+.sep-line {
+    display: inline-block;
+    width: 25px;
+    margin-bottom: .5rem;
+    border: 2px solid #1CCC8F;
+}
+
+/* =====================================
+            GRID SYSTEM
+===================================== */
+
+[class*="col-m-"] {
+    width: 100%;
+	float: left;
+	box-sizing: border-box;
+	padding: 0 10px;
+}
+.col-m-1  {width: 8.33%;}
+.col-m-2  {width: 16.66%;}
+.col-m-3  {width: 25%;}
+.col-m-4  {width: 33.33%;}
+.col-m-5  {width: 41.66%;}
+.col-m-6  {width: 50%;}
+.col-m-7  {width: 58.33%;}
+.col-m-8  {width: 66.66%;}
+.col-m-9  {width: 75%;}
+.col-m-10 {width: 83.33%;}
+.col-m-11 {width: 91.66%;}
+.col-m-12 {width: 100%;}
+
+@media(min-width:768px){
+    [class*="col-t-"] {
+        width: 100%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-t-1  {width: 8.33%;}
+    .col-t-2  {width: 16.66%;}
+    .col-t-3  {width: 25%;}
+    .col-t-4  {width: 33.33%;}
+    .col-t-5  {width: 41.66%;}
+    .col-t-6  {width: 50%;}
+    .col-t-7  {width: 58.33%;}
+    .col-t-8  {width: 66.66%;}
+    .col-t-9  {width: 75%;}
+    .col-t-10 {width: 83.33%;}
+    .col-t-11 {width: 91.66%;}
+    .col-t-12 {width: 100%;}
+}
+
+@media(min-width:1024px){
+    [class*="col-d-"] {
+        width: 100%;
+        float: left;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .col-d-1  {width: 8.33%;}
+    .col-d-2  {width: 16.66%;}
+    .col-d-3  {width: 25%;}
+    .col-d-4  {width: 33.33%;}
+    .col-d-5  {width: 41.66%;}
+    .col-d-6  {width: 50%;}
+    .col-d-7  {width: 58.33%;}
+    .col-d-8  {width: 66.66%;}
+    .col-d-9  {width: 75%;}
+    .col-d-10 {width: 83.33%;}
+    .col-d-11 {width: 91.66%;}
+    .col-d-12 {width: 100%;}
+}
+
+
+/* =====================================
+               Layout
+===================================== */
+.layout-center {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =====================================
+            Clear Utility
+===================================== */
+.clear {clear: both;}
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* =====================================
+            Padding Utility
+===================================== */
+.pd-0 {padding: 0;}
+

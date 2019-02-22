@@ -1,0 +1,266 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href={% static "css/module.css" %}>
+        <link rel="stylesheet" href={% static "css/style.css" %}>
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+        <script type="text/javascript" src={% static "js/jquery.js" %}></script>
+        <script type="text/javascript"></script>
+    </head>
+    <body>
+      <script type="text/javascript">
+        function not_working() {
+          alert('출시 예정입니다.');
+        }
+
+        // $('.not').on('click', function () {
+        //   alert('출시 예정입니다.');
+        // });
+
+        $(function () {
+          $("#home").click(function () {
+            $('html, body').animate({
+              scrollTop: $("#homeConts").offset().top
+            }, 400);
+          });
+          $("#service").click(function () {
+            $('html, body').animate({
+              scrollTop: $("#serviceConts").offset().top - 100
+            }, 400);
+          });
+          $("#usecase").click(function () {
+            $('html, body').animate({
+              scrollTop: $(".infomationConts").offset().top - 100
+            }, 400);
+          });
+          $("#inquery").click(function () {
+            $('html, body').animate({
+              scrollTop: $(".qna_conts").offset().top - 100
+            }, 400);
+          });
+
+        });
+      </script>
+
+        <!-------- HEADER SECTION -------->
+        <header class="m_header clearfix">
+            <nav class="nav_bar">
+                <a href="#mainSection" class="header_logo">BANTO</a>
+                <span class="nav_bar_toggle">
+                    <a href="#">menu</a>
+                </span>
+            </nav>
+        </header>
+
+        <header class="pc_header">
+            <nav class="nav_bar">
+                <a href="#mainSection" class="btn header_logo">BANTO</a>
+                <ul class="menu_list">
+                    <li class="button_list" id="home"><a href="#contents1Section" class="btn button_menu">홈</a></li>
+                    <li class="button_list" id="service"><a href="#contents2Section" class="btn button_menu">서비스소개</a></li>
+                    <li class="button_list" id="usecase"><a href="#contents3Section" class="btn button_menu">이용안내</a></li>
+                    <li class="button_list" id="inquery"><a href="#contents4Section" class="btn button_menu">문의</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-------- MAIN SECTION -------->
+        <section id="mainSection">
+          <div id="homeConts">
+            <div class="main_banner clearfix">
+                <div class="main_banner_text col-m-12 col-t-12 col-d-6 pd-0">
+                    <div class="main_banner_text_table">
+                        <div class="main_banner_text_brand">
+                            <span class="main_banner_text_brand_green">Banto</span>
+                            <span class="main_banner_text_brand_black">Box</span>
+                        </div>
+                        <div class="main_banner_text_title">보조 배터리<br>공유 서비스</div>
+                        <div class="main_banner_button">
+                            <button type="button" onclick="not_working()" class="main_banner_button_green" style="cursor: pointer;">
+                                <img src={% static "imgs/btn_app.svg" %}>
+                            </button>
+                            <button type="button" onclick="not_working()" class="main_banner_button_black" style="cursor: pointer;">
+                                <img src={% static "imgs/btn_google.svg" %}>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_banner_product col-m-12 col-t-12 col-d-6 pd-0">
+                    <img src={% static "imgs/main_product.svg" %}>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!--------  SERVICE SECTION -------->
+        <section id="serviceSection wrapper">
+          <div id="serviceConts">
+            <div class="service_contents clearfix">
+              <div class="service_contents_video col-m-12 col-t-12 col-d-6">
+                <div class="service_video_box"></div>
+              </div>
+              <div class="service_contents_text col-m-12 col-t-12 col-d-6">
+                <hr class="sep-line">
+                <div class="service_contents_text_title">서비스소개</div>
+                <div class="service_contents_text_sub">휴대폰을 방전으로부터 지켜드립니다!<br>내 주변의 반토박스를 찾아보세요.</div>
+              </div>
+            </div>
+            <div class="service_contents_sub">
+              <div class="service_contents_sub_colspace clearfix">
+                <div class="service_contents_sub_conts col-m-12 col-t-12 col-d-4 pd-0">
+                  <div class="service_contents_sub_contSection">
+                    <div class="service_contents_sub_top">충전하세요</div>
+                    <div class="service_contents_sub_bottom">휴대폰으로 게임,SNS를 즐기며 반토박스로 충전하세요</div>
+                  </div>
+                </div>
+                <div class="service_contents_sub_conts col-m-12 col-t-12 col-d-4 pd-0">
+                  <div class="service_contents_sub_contSection">
+                    <div class="service_contents_sub_top">짐을 덜어드립니다</div>
+                    <div class="service_contents_sub_bottom">보조 배터리와 충전 케이블은 집에 놔두셔도 좋습니다. 반토 박스는 어디에나 있으니까요</div>
+                  </div>
+                </div>
+                <div class="service_contents_sub_conts col-m-12 col-t-12 col-d-4 pd-0">
+                  <div class="service_contents_sub_contSection">
+                    <div class="service_contents_sub_top">간편합니다</div>
+                    <div class="service_contents_sub_bottom">가입과 결제가 간단해요. 반토는 사용자의 편의성을 첫째로 생각합니다.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-------- Information SECTION -------->
+        <section id="infomationSection">
+            <div class="infomationConts">
+                <div class="service_contents">
+                    <div class="infomation_contents_text">
+                        <hr class="sep-line">
+                        <div class="service_contents_text_title">이용안내</div>
+                    </div>
+                </div>
+
+                <div class="infocolSection clearfix">
+                    <div class="info_img col-m-12 col-t-12 col-d-6 pd-0">
+                        <img src={% static "imgs/img01.svg" %}>
+                    </div>
+                    <div class="info_text col-m-12 col-t-12 col-d-6 pd-0">
+                        <div class="info_text_conts_num">01</div>
+                        <div class="info_text_conts_main">반토 찾기</div>
+                        <div class="info_text_conts_sub">반토박스가 위치한 가까운 <br>가맹점을 찾아 갑니다</div>
+                    </div>
+                </div>
+
+                <div class="infocolSection clearfix">
+                    <div class="info_img col-m-12 col-t-12 col-d-6 pd-0">
+                        <img src={% static "imgs/img01.svg" %}>
+                    </div>
+                    <div class="info_text col-m-12 col-t-12 col-d-6 pd-0">
+                        <div class="info_text_conts_num">02</div>
+                        <div class="info_text_conts_main">QR코드 스캔</div>
+                        <div class="info_text_conts_sub">반토 박스 오른쪽 위의 <br>QR코드 스티커를 스캔합니다</div>
+                    </div>
+                </div>
+
+                <div class="infocolSection clearfix">
+                    <div class="info_img col-m-12 col-t-12 col-d-6 pd-0">
+                        <img src={% static "imgs/img02.svg" %}>
+                    </div>
+                    <div class="info_text col-m-12 col-t-12 col-d-6 pd-0">
+                        <div class="info_text_conts_num">03</div>
+                        <div class="info_text_conts_main">보조 배터리 선택</div>
+                        <div class="info_text_conts_sub">사용할 보조 배터리를 선택 합니다.</div>
+                    </div>
+                </div>
+
+                <div class="infocolSection clearfix">
+                    <div class="info_img col-m-12 col-t-12 col-d-6 pd-0">
+                        <img src={% static "imgs/img03.svg" %}>
+                    </div>
+                    <div class="info_text col-m-12 col-t-12 col-d-6 pd-0">
+                        <div class="info_text_conts_num">04</div>
+                        <div class="info_text_conts_main">충전</div>
+                        <div class="info_text_conts_sub">보조 배터리리가 나오면 휴대폰을<br>충전하세요.</div>
+                    </div>
+                </div>
+
+                <div class="infocolSection clearfix">
+                    <div class="info_img col-m-12 col-t-12 col-d-6 pd-0">
+                        <img src={% static "imgs/img04.svg" %}>
+                    </div>
+                    <div class="info_text col-m-12 col-t-12 col-d-6 pd-0">
+                        <div class="info_text_conts_num">05</div>
+                        <div class="info_text_conts_main">반납</div>
+                        <div class="info_text_conts_sub">어느 가맹점에서라도 보조 배터리를<br>반납 할 수 있습니다</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-------- QNA SECTION -------->
+        <section id="qnaSection">
+            <div class="qna_conts clearfix">
+                <div class="infomation_contents_text">
+                    <hr class="sep-line">
+                    <div class="service_contents_text_title">문의</div>
+                </div>
+                <div class="qna_input_colspace clearfix">
+                    <div class="input_col">
+                        <input type="text" placeholder="Your name">
+                    </div>
+
+                    <div class="input_col">
+                        <input type="text" placeholder="Your e-mail">
+                    </div>
+
+                    <div class="input_col">
+                        <input type="text" placeholder="subject">
+                    </div>
+
+                    <div class="textarea_col">
+                        <textarea type="text" placeholder="Your message"></textarea>
+                    </div>
+                </div>
+
+                <div class="main_banner_button">
+                    <button type="button" onclick="" class="main_banner_button_green">SEND</button>
+                </div>
+            </div>
+        </section>
+
+        <!-------- FOOTER SECTION -------->
+        <footer class="footerSection">
+            <div class="footerbar clearfix">
+                <div class="footer_logo">BANTO</div>
+                <div class="footer_text col-m-6 col-t-6 col-d-3">
+                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                </div>
+                <div class="footer_text col-m-6 col-t-6 col-d-3">
+                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                </div>
+                <div class="footer_text col-m-6 col-t-6 col-d-3">
+                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                </div>
+                <div class="footer_text col-m-6 col-t-6 col-d-3">
+                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
