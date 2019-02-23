@@ -522,3 +522,18 @@ ls
 python manage.py shell
 vim mysite/settings.py
 python manage.py shell
+. myvenv/bin/activate
+ls
+from django.core.mail import EmailMessage
+python manage.py shell
+ㅣㄴ
+ls
+git remote -v
+git remote
+git push origin banto
+git push origin https://github.com/MoreNiceJay/newDjango.git
+git add .
+git status
+git commit -m "banto1"
+git push git push -u origin master
+git push -u origin master

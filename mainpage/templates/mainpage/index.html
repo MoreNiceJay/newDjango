@@ -208,12 +208,14 @@
                     <hr class="sep-line">
                     <div class="service_contents_text_title">문의</div>
                 </div>
-                <div class="qna_input_colspace clearfix">
-                    <div class="input_col">
-                        <input type="text" placeholder="Your name">
-                    </div>
 
+                <div class="qna_input_colspace clearfix">
+                <form method='POST' action='.'>{% csrf_token %}
                     <div class="input_col">
+                        <!-- <input type="text" placeholder="Your name">
+                    </div> -->
+
+                    <!-- <div class="input_col">
                         <input type="text" placeholder="Your e-mail">
                     </div>
 
@@ -223,12 +225,15 @@
 
                     <div class="textarea_col">
                         <textarea type="text" placeholder="Your message"></textarea>
-                    </div>
+                    </div> -->
+                    {{ form.as_p }}
                 </div>
 
                 <div class="main_banner_button">
-                    <button type="button" onclick="" class="main_banner_button_green">SEND</button>
+                    <button type="submit" onclick="" class="main_banner_button_green">SEND</button>
+
                 </div>
+                </form>
             </div>
         </section>
 
