@@ -32,6 +32,10 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '_zuaab0koonrrsfj_#(=((#z3^m(574anl2=(g#=nka9#7^yq$'
 
+#
+#os.environ['SECRET_KEY'] 
+#'_zuaab0koonrrsfj_#(=((#z3^m(574anl2=(g#=nka9#7^yq$'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 

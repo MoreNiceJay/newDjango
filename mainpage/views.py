@@ -22,8 +22,8 @@ def mainpage(request):
     context = {'form': newForm}
     form = PostForm(request.POST or None)
     if request.method == 'POST' and form.is_valid():
-        post = form.save(commit=False)
-        post.save()
+        #post = form.save(commit=False)
+
         author  = form.cleaned_data['author']
         email   = form.cleaned_data['email']
         subject = form.cleaned_data['subject']
