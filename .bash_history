@@ -537,3 +537,511 @@ git status
 git commit -m "banto1"
 git push git push -u origin master
 git push -u origin master
+ls
+ls
+ㅣㄴ
+ls
+sda
+ls
+service nginx stop
+ls
+service uwsgi stop
+ls
+. myvenv/bin/activate
+p
+python manage.py runserver 0.0.0.0:8000
+git add .
+git commit -m "mail_done"
+git add *
+git commit -m "mail_done"
+git push origin master
+gitk
+python manage.py runserver 0.0.0.0:8000
+ls
+. myvenv/bin/activate
+ls
+python manage.py runserver 0.0.0.0:8000
+systemctl --system daemon-reload
+sudo systemctl restart uwsgi
+sudo systemctl restart nginx
+sudo systemctl stop uwsgi
+python manage.py runserver 0.0.0.0:8000
+ls
+git push origin master
+ls
+git add *
+git commit -m "QnA Design done"
+git push origin master
+ls
+. myvenv/bin/activate
+ls
+sytemctl stop uwsgi
+systemctl stop uwsgi
+python manage.py runserver 0.0.0.0:8000
+ls
+. myvenv/bin/activate
+ls
+python manage.py check --deploy
+ls
+cd mysite/
+ls
+vim settings.py
+ls
+vim /etc/
+mkdir /etc/djangoSecret
+sudo vim /etc/djangoSecret
+vim settings.py
+vim /etc/djangoSecret
+vim settings.py
+vim /etc/djangoSecret
+sudo vim /etc/djangoSecret 
+ls
+vim settings.py
+vim ~/.profile
+ls
+vim /.bashrc
+vim ~/.bashrc
+vim ~/.bash_profile
+vim ~/.bashrc
+vim settings.py
+vim ~/.bashrc
+echo $SECRET_KEY
+source ~/.bashrc
+vim ~/.bashrc
+source ~/.bashrc
+
+systemstcl --daemon restart
+systemsctl --daemon restart
+systemctl daemon-reload
+systemctl start nginx
+systemctl start uwsgi
+vim settings.py
+systemctl start uwsgi
+systemctl start nginx
+
+vim settings.py
+systemctl daemon-reload
+systemctl start nginx
+systemctl restart nginx
+
+ls
+systemctl stop uwsgi
+ls
+cd ..
+ls
+python manage.py runserver 0.0.0.0:8000
+
+python manage.py runserver 0.0.0.0:8000
+vim settings.py
+vim mysite/settings.py
+python manage.py runserver 0.0.0.0:8000
+systemctl restart uwsgi
+systemctl restart nginx
+systemctl daemon-reload
+echo $SECRET_KEY
+tail /var/log/nginx/error.log
+systemctl status uwsgi.service 
+ls
+python manage.py shell
+ls
+cd run
+ls
+tail /var/log/nginx/error.log
+tail -f /var/log/nginx/error.log
+tail /var/log/nginx/error.log
+ls
+systemctl status uwsgi.service 
+ls
+cat uwsgi.
+cat uwsgi.ini
+ls
+cd ..
+ls
+vim mysite/
+ls
+vim mysite/
+vim mysite/settings.py
+tail /var/log/nginx/error.log
+systemctl status uwsgi.service 
+systemctl stop uwsgi.service 
+systemctl restart uwsgi.service 
+systemctl status uwsgi.service 
+ks
+ls
+vim mysite/settings.py
+systemctl restart uwsgi.service 
+tail /var/log/syslog
+vim mysite/settings.py
+ls
+systemctl restart uwsgi.service 
+ls
+vim settings_secret.py
+vim .bash_profile
+vim .bashrc
+ls
+. myvenv/bin/activate
+ls
+python manage.py runserver 0.0.0.0:8000
+vim mainpage/views.py
+pwd
+cd mainpage/url.py
+vim mainpage/urls.py
+ls
+. myvenv/bin/activate
+ls
+python manage.py runserver 0.0.0.0:8000
+MultiValueDictKeyError: "u'author'"
+python manage.py runserver 0.0.0.0:8000
+. myvenv/bin/activate
+ls
+python manage.py runserver 0.0.0.0:8000
+ls
+ls
+. myvenv/bin/activate
+ls
+python manage.py runserver 0.0.0.0:8000
+ㅣㄴ
+ls
+cd run
+ls
+cd ..
+ls
+. myvenv/bin/activate
+ls
+ㅣㄴ
+ls
+systemctl --system daemon-reload
+sudo systemctl restart uwsgi
+sudo systemctl restart nginx
+sudo systemctl restart uwsgi
+systemctl --system daemon-reload
+sudo systemctl stop uwsgi
+sudo systemctl stop nginx
+ls
+. myvenv/bin/activate
+ls
+python manage.py runserver 0.0.0.0:8000
+sudo systemctl restart uwsgi
+sudo systemctl restart nginx
+systemctl --system daemon-reload
+ls
+. myvenv/bin/activate
+ls
+python manage.py runserver 0.0.0.0:8000
+python manage.py find static
+python manage.py help
+python manage.py collectstatic
+sudo systemctl restart nginx
+sudo systemctl restart uwsgi
+sudo systemctl restart -deamon
+sudo systemctl reload -deamon
+sudo systemctl reload-deamon
+sudo systemctl reload --deamon
+sudo systemctl restart nginx
+sudo systemctl restart uwsgi
+python manage.py collectstatic
+sudo systemctl restart nginx
+sudo systemctl restart uwsgi
+system daemon-reload
+systemctl daemon-reload
+sudo -i
+exit
+ls
+. myvenv/bin/activate
+ls
+cd mysite
+ls
+cd ..
+ls
+cd mainpage/
+ls
+systemctl restart nginx
+systemctl restart uwsgi
+cd ..
+ls
+cd mainpage/templates/
+ls
+cd mainpage/
+ls
+vim FAQ.html 
+ls
+. myvenv/bin/activate
+ls
+systemct daemon-reload
+systemctl daemon-reload
+systemctl restart nginx
+systemctl restart wsgi
+systemctl restart uwsgi
+systemctl restart nginx
+systemctl daemon-reload
+systemctl restart nginx
+systemctl restart uwsgi
+systemctl restart nginx
+systemctl daemon-reload
+systemctl restart nginx
+systemctl restart uwsgi
+systemctl restart nginx
+systemctl daemon-reload
+systemctl restart nginx
+systemctl restart uwsgi
+systemctl restart nginx
+systemctl restart uwsgi
+systemctl daemon-reload
+systemctl restart uwsgi
+systemctl restart nginx
+wget https://dl.eff.org/certbot-auto
+sudo mv certbot-auto /usr/local/bin/certbot-auto
+sudo chown root /usr/local/bin/certbot-auto
+sudo chmod 0755 /usr/local/bin/certbot-auto
+sudo /usr/local/bin/certbot-auto --nginx
+echo "0 0,12 * * * root python -c 'import random; import time; time.sleep(random.random() * 3600)' && /usr/local/bin/certbot-auto renew" | sudo tee -a /etc/crontab > /dev/null
+ls
+cd mainpage/
+ls
+cd templates/
+ls
+cd mainpage/
+ls
+cd ..
+ls
+cd ubuntu/
+ls
+user
+whoiam
+who
+ls
+rm -rf teambanto-adminpage-5f9022a54c51
+ls
+rm -rf teambanto-adminpage-5f9022a54c51.zip
+ls
+cd react
+mkdir banto_admin
+ls
+cd banto_admin/
+ls
+npm
+ls
+unzip teambanto-bantoadminpage-2ddc19072357.zip 
+ls
+cd teambanto-bantoadminpage-2ddc19072357/
+ls
+npm i
+
+ls
+npm i
+sudo apt-get install htop
+ls
+cd banto_admin/
+ls
+cd teambanto-bantoadminpage-2ddc19072357/
+ls
+sudo npm i
+reboot
+sudo reboot
+free -m
+ls
+cd banto_admin/
+ls
+cd teambanto-bantoadminpage-2ddc19072357/
+ls
+dmesg | grep -E -i -B100 'killed process'
+ls
+sudo npm i
+rm -r bin/node bin/node-waf include/node lib/node lib/pkgconfig/nodejs.pc share/man/man1/node.1
+sudo rm /usr/local/bin/{node,npm}
+rm -r bin/node bin/node-waf include/node lib/node lib/pkgconfig/nodejs.pc share/man/man1/node.1
+which node
+node
+node -v
+sudp sudo apt-get update
+sudo apt-get update
+sudo apt-get install nodejs
+sudo apt autoremove
+sudo apt-get install npm
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+sudo apt-get install nodejs
+sudo apt-get install build-essential
+ls
+npm i
+ls
+cd banto_admin/
+ls
+cd teambanto-bantoadminpage-2ddc19072357/
+ls
+npm start
+ls
+npm i
+ls
+cd banto_admin
+ls
+cd teambanto-bantoadminpage-2ddc19072357/
+sudo /bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024
+ls
+npm i
+npm start
+ls
+PORT=8888 pm2 start --name banto_admin npm -- start
+sudo npm pm2
+sudo npm pm2 -g
+sudo npm install pm2 -g
+PORT=8888 pm2 start --name banto_admin npm -- start
+pm2 list
+pm2 -list
+sudo pm2 list
+pm2 monitor
+DEBUG=* pm2 list
+pm2 stop
+$ npm install pm2@latest -g
+npm install pm2@latest -g
+sudo npm install pm2@latest -g
+pm2 list
+sudo pm2 list
+sudo pm2 stop banto_api
+sudo chown $USER /usr/local/lib/node_modules/pm2 -R
+which pm2
+sudo chown $USER /usr/bin/pm2
+pm2 list
+sudo npm i -g pm2@3.5.1
+wget -qO- https://getpm2.com/install.sh | bash
+pm2 list
+npm start
+sudo npm start
+npm start
+SyntaxError: Unexpected token ...
+node app.js
+SyntaxError: Unexpected token ...
+node app.js
+npm start
+sudo npm start
+npm install
+sudo npm install
+node -v
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+node -v
+npm -v
+sudo npm install -g npm
+npm -v
+npm i
+npm WARN react-scripts@3.4.0 requires a peer of typescript@^3.2.1 but none was installed.
+n lts
+sudo n lts
+sudo npm install -g npm
+dls
+ls
+cd banto_admin/
+ls
+cd teambanto-bantoadminpage-2ddc19072357/
+ls
+rm -rf node_modules/
+ls
+sudo npm i
+npm start
+ls
+PORT=8888 pm2 start --name banto_api npm -- start
+ifconfig
+172.31.20.7ls
+pm2 list
+pm2 stop banto_api
+pm2 delete banto_api
+PORT=8889 pm2 start --name banto_api npm -- start
+pm2 monitor
+ls
+pm2 log.txt
+pm2 -help
+pm2 -h
+pm2 delete banto_api
+PORT=3000 pm2 start --name banto_api npm -- start
+cd /etc/nginx/sites-available/
+ls
+cd ..
+ls
+cd sites-available/
+ls
+cd d
+vim django
+ls
+history
+cd /etc/nginx/sites-available/
+sudo vim django 
+sudo service nginx restart
+ls
+history
+cd /etc/nginx/sites-available/
+ls
+sudo vim django
+sudo service nginx restart
+sudo vim django
+sudo service nginx restart
+pm2 reload banto_api
+pm2 list
+pm2
+pm2 reload banto_api
+pm2 list
+pm2 reload banto_api
+pm2 monit
+sudo service nginx restart
+pm2 monit
+pm2 stop banto_api
+pm2 start banto_api
+sudo service nginx restart
+pm2 reload banto_api
+sudo service nginx restart
+ls
+cd banto_admin/
+ls
+cd teambanto-bantoadminpage-2ddc19072357/
+ls
+exit
+sudo adduser factory
+sudo visudo
+exit
+pm2 list
+pm2 help
+pm2 -h
+PORT=3000 pm2 start --name banto_rent_log npm -- start
+pwd
+pm2 delete banto_api
+pm2 delete banto_rent_log
+cd banto_admin/
+ls
+cd teambanto-bantoadminpage-2ddc19072357/
+ls
+PORT=3000 pm2 start --name banto_rent_log npm -- start
+pm2 reload banto_partners
+ls
+cd banto_partners/
+ls
+cd banto-partners/
+ls
+sudo npm install react-router-dom
+sudo npm install react-router-dom --save
+ls
+cd banto_partners/
+ls
+cd banto-partners/
+ls
+git pull origin
+sudo git pull origin
+git pull
+Please, commit your changes or stash them before you can merge.
+git stash
+git pull
+pm2 list
+pm2 reload banto_partners
+ls
+pm2 reload banto_partners
+pm2 list
+passwd ubuntu
+ls
+cd banto_
+cd banto_admin/
+ls
+cd teambanto-bantoadminpage-2ddc19072357/
+ls
+npm install moment --save
+pm2 list
+npm i

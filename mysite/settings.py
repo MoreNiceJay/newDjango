@@ -33,7 +33,7 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 SECRET_KEY = '_zuaab0koonrrsfj_#(=((#z3^m(574anl2=(g#=nka9#7^yq$'
 
 #
-#os.environ['SECRET_KEY'] 
+#os.environ['SECRET_KEY']
 #'_zuaab0koonrrsfj_#(=((#z3^m(574anl2=(g#=nka9#7^yq$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -45,6 +45,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'ec2-13-125-12-65.ap-northeast-2.compute.amazonaws
 # Application definition
 
 INSTALLED_APPS = [
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,6 +56,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -120,7 +123,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Asia/Seoul' 
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
@@ -134,4 +137,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+CORS_ORIGIN_ALLOW_ALL = True # If this is used then `CORS_ORIGIN_WHITELIST` will not have any effect
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3030',"*", "https://bantoweb.xyz"
+] # If this is used, then not need to use `CORS_ORIGIN_ALLOW_ALL = True`
+CORS_ORIGIN_REGEX_WHITELIST = [
+    'http://localhost:3030',"*", "https://bantoweb.xyz"
+]
 

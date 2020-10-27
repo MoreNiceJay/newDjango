@@ -3,32 +3,67 @@
 <!DOCTYPE html>
 <html lang="ko">
     <head>
+                <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-73070612-3"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-73070612-3');
+        </script>
         <meta charset="utf-8">
         <link rel="stylesheet" href={% static "css/module.css" %}>
         <link rel="stylesheet" href={% static "css/style.css" %}>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="etag" content=""/>
 
+        <meta property="og:title" content="반토" />
+        <meta property="og:description" content="보조배터리 대여서비스를 소개합니다" />
+
+        <meta property="og:image" content="https://banto.io/static/imgs/main_product.svg" />
+        <meta property="og:image:width" content="200" />
+        <meta property="og:image:height" content="200" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://banto.io" />
+        <meta property="og:see_also" content="https://banto.io" />
+        <meta property="og:site_name" content="banto.io" />
+        <meta property="og:locale" content="ko_KR" />
+        <meta property="fb:app_id" content="816873545350222" />
+
+
+      <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
         <script type="text/javascript" src={% static "js/jquery.js" %}></script>
         <script type="text/javascript"></script>
-    </head>
-    <body>
-      <script type="text/javascript">
+        <script type="text/javascript">
         function not_working() {
-          alert('준비 중 입니다.');
+          alert('준비중 입니다');
         }
         var myTimer = setTimeout(function() {
-  alert('안녕')
-}, 3000);
-clearTimeout(myTimer);
+          alert('안녕')
+        }, 3000);
+        clearTimeout(myTimer);
 
+        $('#post-form').on('submit', function(event){
+          event.preventDefault();
+          console.log("form submitted!")  // sanity check
+          create_post();
+        });
+
+        // AJAX for posting
+        function create_post() {
+          console.log("create post is working!") // sanity check
+          console.log($('#post-text').val())
+        };
 
         //
         // function thanks() {
-        //   alert('감사합니다. 곧 답장 드리겠습니다.');
+        //   alert('감사?�니?? �??�장 ?�리겠습?�다.');
         // }
 
         // $('.not').on('click', function () {
-        //   alert('출시 예정입니다.');
+        //   alert('출시 ?�정?�니??');
         // });
 
         $(function () {
@@ -53,8 +88,24 @@ clearTimeout(myTimer);
             }, 400);
           });
 
+          $('#frm_submit').on('click', function (e) {
+            var token = $('input[name="csrfmiddlewaretoken"]').val();
+            var author = $('#id_author').val();
+            alert(token);
+            $.ajax({
+              url: 'create_post',
+              type: 'POST',
+              data: {token:token, author:author, email:email, subject:subject, message:message },
+              success: function () {
+                alert(author);
+              }
+            });
+          });
         });
+
       </script>
+    </head>
+    <body>
 
         <!-------- HEADER SECTION -------->
         <header class="m_header clearfix">
@@ -71,8 +122,8 @@ clearTimeout(myTimer);
                 <a href="#mainSection" class="btn header_logo">BANTO</a>
                 <ul class="menu_list">
                     <li class="button_list" id="home"><a href="#contents1Section" class="btn button_menu">홈</a></li>
-                    <li class="button_list" id="service"><a href="#contents2Section" class="btn button_menu">서비스소개</a></li>
-                    <li class="button_list" id="usecase"><a href="#contents3Section" class="btn button_menu">이용안내</a></li>
+                    <li class="button_list" id="service"><a href="#contents2Section" class="btn button_menu">서비스 소개</a></li>
+                    <li class="button_list" id="usecase"><a href="#contents3Section" class="btn button_menu">이용 안내</a></li>
                     <li class="button_list" id="inquery"><a href="#contents4Section" class="btn button_menu">문의</a></li>
                 </ul>
             </nav>
@@ -88,12 +139,15 @@ clearTimeout(myTimer);
                             <span class="main_banner_text_brand_green">Banto</span>
                             <span class="main_banner_text_brand_black">Box</span>
                         </div>
-                        <div class="main_banner_text_title">보조 배터리<br>공유 서비스</div>
+                        <div class="main_banner_text_title">보조 배터리 공유 서비스</div>
                         <div class="main_banner_button">
-                            <button type="button" onclick="not_working()" class="main_banner_button_green" style="cursor: pointer;">
+
+
+
+                            <button type="button" onclick="location.href = 'https://apps.apple.com/kr/app/%EB%B0%98%ED%86%A0-%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC-%EB%8C%80%EC%97%AC-%EC%84%9C%EB%B9%84%EC%8A%A4/id1479328305'" class="main_banner_button_green" style="cursor: pointer;">
                                 <img src={% static "imgs/btn_app.svg" %}>
                             </button>
-                            <button type="button" onclick="not_working()" class="main_banner_button_black" style="cursor: pointer;">
+                            <button type="button" onclick="location.href = 'https://play.google.com/store/apps/details?id=com.Banto.Battery'" class="main_banner_button_black" style="cursor: pointer;">
                                 <img src={% static "imgs/btn_google.svg" %}>
                             </button>
                         </div>
@@ -112,12 +166,11 @@ clearTimeout(myTimer);
             <div class="service_contents clearfix">
               <div class="service_contents_video col-m-12 col-t-12 col-d-6">
               <!--------   <div class="service_video_box">  </div>-------->
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/R2D3sPVyKck" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/2UIIIFdDsBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               <div class="service_contents_text col-m-12 col-t-12 col-d-6">
                 <hr class="sep-line">
-                <div class="service_contents_text_title">서비스소개</div>
+                <div class="service_contents_text_title">서비스 소개</div>
                 <div class="service_contents_text_sub">휴대폰을 방전으로부터 지켜드립니다!<br>내 주변의 반토박스를 찾아보세요.</div>
               </div>
             </div>
@@ -137,8 +190,8 @@ clearTimeout(myTimer);
                 </div>
                 <div class="service_contents_sub_conts col-m-12 col-t-12 col-d-4 pd-0">
                   <div class="service_contents_sub_contSection">
-                    <div class="service_contents_sub_top">간편합니다</div>
-                    <div class="service_contents_sub_bottom">가입과 결제가 간단해요. 반토는 사용자의 편의성을 첫째로 생각합니다.</div>
+                    <div class="service_contents_sub_top">간편합니다<div>
+                    <div class="service_contents_sub_bottom">가입과 결제가 간단해요. 반토는 사용자의 편의성을 첫째로 생각합니다</div>
                   </div>
                 </div>
               </div>
@@ -158,7 +211,7 @@ clearTimeout(myTimer);
 
                 <div class="infocolSection clearfix">
                     <div class="info_img col-m-12 col-t-12 col-d-6 pd-0">
-                        <img src={% static "imgs/img01.svg" %}>
+                        <img src={% static "imgs/img01.png" %}>
                     </div>
                     <div class="info_text col-m-12 col-t-12 col-d-6 pd-0">
                         <div class="info_text_conts_num">01</div>
@@ -169,12 +222,13 @@ clearTimeout(myTimer);
 
                 <div class="infocolSection clearfix">
                     <div class="info_img col-m-12 col-t-12 col-d-6 pd-0">
-                        <img src={% static "imgs/img01.svg" %}>
+                        <img src={% static "imgs/img02.png" %}>
                     </div>
                     <div class="info_text col-m-12 col-t-12 col-d-6 pd-0">
                         <div class="info_text_conts_num">02</div>
                         <div class="info_text_conts_main">QR코드 스캔</div>
-                        <div class="info_text_conts_sub">반토 박스 오른쪽 위의 <br>QR코드 스티커를 스캔합니다</div>
+                        <div class="info_text_conts_sub">반토 박스 오른쪽 위의 QR코드 스티커를 스캔합니다
+                          </div>
                     </div>
                 </div>
 
@@ -196,7 +250,7 @@ clearTimeout(myTimer);
                     <div class="info_text col-m-12 col-t-12 col-d-6 pd-0">
                         <div class="info_text_conts_num">04</div>
                         <div class="info_text_conts_main">충전</div>
-                        <div class="info_text_conts_sub">보조 배터리리가 나오면 휴대폰을<br>충전하세요.</div>
+                        <div class="info_text_conts_sub">보조 배터리가 나오면 휴대폰을<br>충전하세요</div>
                     </div>
                 </div>
 
@@ -222,7 +276,8 @@ clearTimeout(myTimer);
                 </div>
 
                 <div class="qna_input_colspace clearfix">
-                <form method='POST' action='.'>{% csrf_token %}
+                <form method='POST' id="post-form">
+                  {% csrf_token %}
                   <!--  <div class="input_col">
                     <input type="text" placeholder="Your name">
                     </div>
@@ -257,10 +312,10 @@ clearTimeout(myTimer);
 
                 </div>
 
-                <div class="main_banner_button">
-                    <button type="submit" onclick="thanks()" class="main_banner_button_green">보내기</button>
-
-                </div>
+                  <div class="main_banner_button">
+                       <button type="submit"  class="main_banner_button_green">보내기</button>
+                      <!--<button type="button" class="main_banner_button_green" id="frm_submit">?�제</button>-->
+                  </div>
                 </form>
             </div>
         </section>
@@ -269,29 +324,35 @@ clearTimeout(myTimer);
         <footer class="footerSection">
             <div class="footerbar clearfix">
                 <div class="footer_logo">BANTO</div>
+                <div style="text-align:left" class="footer_text col-m-6 col-t-6 col-d-3">
+                    <div class="footer_conts"><b>회사명</b> 반토 주식회사</div>
+                    <div class="footer_conts"><b>대표자</b> 이장협</div>
+                    <div class="footer_conts"><b>연락처</b> 010 9455 2438</div>
+                    <div class="footer_conts"><b>사업자 등록번호</b>  187-87-01044</div>
+                    <div class="footer_conts"><b>주소</b>  서울 영등포구 대림동 851-100 하나세인스톤</div>
+                    <div class="footer_conts"><b>통신판매업</b> 2019-서울 영등포-0459</div>
+                    <div class="footer_conts"><b>고객센터</b> 070 8065 5699</div>
+                    <div class="footer_conts"><b><a href=" {% url 'service_policy' %}">서비스 이용 약관 | </a></b> <a href=" {% url 'private_info' %}"><b>개인정보 취급방침 | </b> </a><a href=" {% url 'refund_policy' %}"><b> &nbsp환불 약관 </b> </a></div>
+
+                </div>
+
                 <div class="footer_text col-m-6 col-t-6 col-d-3">
-                    <div class="footer_conts">회사명 주식회사 올룰로</div>
-                    <div class="footer_conts">회사명 주식회사 올룰로</div>
-                    <div class="footer_conts">회사명 주식회사 올룰로</div>
-                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                  <!-------  <div class="footer_conts">?�사�?주식?�사 ?�룰�?/div>
+                    <div class="footer_conts">?�사�?주식?�사 ?�룰�?/div>
+                    <div class="footer_conts">?�사�?주식?�사 ?�룰�?/div>
+                    <div class="footer_conts">?�사�?주식?�사 ?�룰�?/div> ----->
                 </div>
                 <div class="footer_text col-m-6 col-t-6 col-d-3">
-                    <div class="footer_conts">회사명 주식회사 올룰로</div>
-                    <div class="footer_conts">회사명 주식회사 올룰로</div>
-                    <div class="footer_conts">회사명 주식회사 올룰로</div>
-                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                  <!-------  <div class="footer_conts">?�사�?주식?�사 ?�룰�?/div>
+                    <div class="footer_conts">?�사�?주식?�사 ?�룰�?/div>
+                    <div class="footer_conts">?�사�?주식?�사 ?�룰�?/div>
+                    <div class="footer_conts">?�사�?주식?�사 ?�룰�?/div> ----->
                 </div>
                 <div class="footer_text col-m-6 col-t-6 col-d-3">
-                    <div class="footer_conts">회사명 주식회사 올룰로</div>
-                    <div class="footer_conts">회사명 주식회사 올룰로</div>
-                    <div class="footer_conts">회사명 주식회사 올룰로</div>
-                    <div class="footer_conts">회사명 주식회사 올룰로</div>
-                </div>
-                <div class="footer_text col-m-6 col-t-6 col-d-3">
-                    <div class="footer_conts">회사명 주식회사 올룰로</div>
-                    <div class="footer_conts">회사명 주식회사 올룰로</div>
-                    <div class="footer_conts">회사명 주식회사 올룰로</div>
-                    <div class="footer_conts">회사명 주식회사 올룰로</div>
+                  <!-------  <div class="footer_conts">?�사�?주식?�사 ?�룰�?/div>
+                    <div class="footer_conts">?�사�?주식?�사 ?�룰�?/div>
+                    <div class="footer_conts">?�사�?주식?�사 ?�룰�?/div>
+                    <div class="footer_conts">?�사�?주식?�사 ?�룰�?/div> ----->
                 </div>
             </div>
         </footer>

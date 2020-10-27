@@ -15,8 +15,20 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-
+from mainpage import views
 urlpatterns = [
+    url(r'^$', views.mainpage, name='mainpage'),
+
     url(r'^admin/', admin.site.urls),
-    url(r'', include('mainpage.urls')),
+    url(r'^policy/', include('mainpage.urls')),
+    url(r'^FAQ$',views.FAQ, name='FAQ'),
+
+
+
+    # url(r'^geo_policy$',include('mainpage.urls')),
+    # url(r'^private_info$',include('mainpage.urls')),
+    # url(r'^rent_policy$',include('mainpage.urls')),
+    # url(r'^service_policy$',include('mainpage.urls')),
+    # url(r'^FAQ$',include('mainpage.urls')),
+    # url(r'^refund_policy$',include('mainpage.urls'))
 ]

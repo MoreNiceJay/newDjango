@@ -7,6 +7,7 @@ from django.views import View
 from .forms import PostForm
 from .models import QnA
 from django.core.mail import EmailMessage
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 #class MainView(View):
@@ -43,9 +44,28 @@ def mainpage(request):
         print(form.cleaned_data['message'])
 
     return render(request, 'mainpage/index.html', context )
+@csrf_exempt
+def hello(request):
+    token = request.POST['token']
+    print(token)
+    author = request.POST['author']
+    print(author)
+    return render(request, 'mainpage/index.html' )
 
 
 
+def geo_policy(request):
+    return render(request, 'mainpage/geo_policy.html' )
+def private_info(request):
+    return render(request, 'mainpage/private_info.html' )
+def rent_policy(request):
+    return render(request, 'mainpage/rent_policy.html' )
+def service_policy(request):
+    return render(request, 'mainpage/service_policy.html' )
+def FAQ(request):
+    return render(request, 'mainpage/FAQ.html' )
+def refund_policy(request):
+    return render(request, 'mainpage/refund_policy.html' )
     # print(request.POST)
     #
     # who = ""
